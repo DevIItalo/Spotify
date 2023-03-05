@@ -6,7 +6,7 @@ let musicas = [
 
 //inicio
 let musica = document.getElementById('audio');
-let musicaIndex = 0;
+let indexMusica = 0;
 
 let duracaoMusica = document.getElementById('fim');
 let imagem = document.querySelector('img');

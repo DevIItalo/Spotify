@@ -1,28 +1,28 @@
 let musicas = [
-    {titulo:'A prova de bala', artista:'VMZ', src:'Song/VMZ-A Prova de Balas.mp3', img:'Img/depre.jpg'},    
-    {titulo:'Plutão', artista:'VMZ', src:'Song/VMZ - Plutão.mp3', img:'Img/plutao.jpg'},
-    {titulo:'Baka', artista:'VMZ', src:'Song/VMZ - Baka _ Prod. Jow Santh.mp3', img:'Img/baka.jpg'}
+    {titulo:'A prova de bala', artista:'VMZ', src:'song/balas.mp3', img:'img/depre.jpg'},    
+    {titulo:'Plutão', artista:'VMZ', src:'song/plutao.mp3', img:'img/plutao.jpg'},
+    {titulo:'Baka', artista:'VMZ', src:'song/baka.mp3', img:'img/baka.jpg'}
 ];
 
 //inicio
-let musica = document.querySelector('audio');
+let musica = document.getElementById('audio');
 let musicaIndex = 0;
 
-let duracaoMusica = document.querySelector('.fim');
+let duracaoMusica = document.getElementById('fim');
 let imagem = document.querySelector('img');
-let nomeMusica = document.querySelector('.descricao h2');
-let nomeArtista = document.querySelector('.descricao i');
+let nomeMusica = document.getElementById('nmsc');
+let nomeArtista = document.getElementById('nart');
 
 renderizarMusica(indexMusica);
 
 // Eventos
-document.querySelector('#play').addEventListener('click', tocarMusica);
+document.getElementById('play').addEventListener('click', tocarMusica);
 
-document.querySelector('#pause').addEventListener('click', pausarMusica);
+document.getElementById('pause').addEventListener('click', pausarMusica);
 
 musica.addEventListener('timeupdate', atualizarBarra);
 
-document.querySelector('#previous').addEventListener('click', () => {
+document.getElementById('previous').addEventListener('click', () => {
     indexMusica--;
     if (indexMusica < 0) {
         indexMusica = 2;
@@ -30,7 +30,7 @@ document.querySelector('#previous').addEventListener('click', () => {
     renderizarMusica(indexMusica);
 });
 
-document.querySelector('#next').addEventListener('click', () => {
+document.getElementById('next').addEventListener('click', () => {
     indexMusica++;
     if (indexMusica > 2){
         indexMusica = 0;

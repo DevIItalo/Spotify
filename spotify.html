@@ -4,33 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Spotify</title>
 </head>
 <body>
     <div class="container">
-        <img src="img/baka.jpg">
-        <div class="descricao">
-            <h2 class="nome__musica">Nome da Musica</h2>
-            <i class="nome__artista">Nome do Artista</i>
-        </div>
-        <div class="duracao">
-            <div class="barra">
-                <progress value="10" max="1"></progress>
-                <div class="ponto"></div>
-                <div class="tempo">
-                    <p id="inicio">00:00</p>
-                    <p id="fim">03:00</p>
+        <div class="conteudo">
+            <img src="img/baka.jpg">
+            <div class="descricao">
+                <h2 class="nome__musica">Nome da Musica</h2>
+                <i class="nome__artista">Nome do Artista</i>
+            </div>
+            <div class="duracao">
+                <div class="barra">
+                    <progress value="10" max="1"></progress>
+                    <div class="ponto"></div>
+                    <div class="tempo">
+                        <p id="inicio">00:00</p>
+                        <p id="fim">03:00</p>
+                    </div>
                 </div>
             </div>
+            <div class="player">
+                <button class="btn_style" id="volta"><img src="img/início.png" alt="volta"></button>
+                <button class="btn_style" id="play"><img src="img/play.png" alt="play"></button>
+                <button class="btn_style" id="pause"><img src="img/pause.png" alt="pause"></button>
+                <button class="btn_style" id="proximo"><img src="img/fim.png" alt="proximo"></button>
+            </div>
+            <audio src="music/baka.mp3" id="audio"></audio>
         </div>
-        <div class="player">
-            <button class="btn_style" id="volta"><img src=""></button>
-            <button class="btn_style" id="play"><img src=""></button>
-            <button class="btn_style" id="pause"><img src=""></button>
-            <button class="btn_style" id="proximo"><img src=""></button>
-        </div>
-        <audio src="music/baka.mp3" id="audio"></audio>
     </div>
 </body>
 </html>

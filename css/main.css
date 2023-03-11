@@ -1,29 +1,50 @@
 @charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body, html {
-    margin: 0;
+:root {
+    --cor0: #00FF00;
+    --cor2: #60A000;
+    --cor3: #FF0000;
+    --cor4: #E00020;
+    --cor5: #0000FF;
+    --cor6: #3F3FFF;
+
+    --font_nomal: Arial, Helvetica, sans-serif;
+    --font_robot: 'Roboto', sans-serif;
+}
+
+*{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font_robot);
+    height: 100vh;
+}
+
+div.container {
+    background-image: linear-gradient(to right, var(--cor0), var(--cor3), var(--cor5));
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: #333;
-    color: #ddd;
-    font-family: 'Montserrat', sans-serif;
 }
 
-img{
+div.conteudo img {
     max-width: 300px;
     max-height: 300px;
+    border-radius: 15px 14px;
 }
 
-.descricao{
+div.descricao {
     width: 300px;
     height: 100px;
 }
 
-.barra{
+.barra {
     width: 300px;
     height: 6px;
     border: 1px solid #eee;
@@ -33,27 +54,38 @@ img{
     justify-content: flex-start;
 }
 
-progress{
+progress {
     height: 6px;
     width: 0%;
-    background-color: #333;
+    background-color: var(--cor1);
 }
 
-
-
-.ponto{
+.ponto {
     width: 20px;
     height: 20px;
-    background-color: #eee;
+    background-color: var(--cor0);
     border-radius: 50%;
-    margin-left: -10px;
+    margin-left: -15px;
 }
 
 .tempo{
     display: flex;
-    width: 350px;
-    height: 10px;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 20px;
     justify-content: space-between;
+}
+
+button.btn_style {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button.btn_style:hover {
+    background-color: var(--cor0);
 }
 
 #play{
@@ -62,7 +94,7 @@ progress{
     display: inline-block;
     cursor: pointer;
 }
-#previous{
+#volta{
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -75,7 +107,7 @@ progress{
     display: none;
     cursor: pointer;
 }
-#next{
+#proximo{
     width: 40px;
     height: 40px;
     display: inline-block;

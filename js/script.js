@@ -98,6 +98,22 @@ function atualizarBarraProgresso() {
     fimTempo.textContent = fimFormatado;
 
 }
+
+function avancarProximaMusica() {
+    musicaAtual++;
+    if (musicaAtual >= musicas.length) {
+      musicaAtual = 0;
+    }
+  
+    musica.src = musicas[musicaAtual][0];
+    img.src = musicas[musicaAtual][2] + ".jpg";
+    nomeMusica.textContent = musicas[musicaAtual][0];
+    nomeArtista.textContent = musicas[musicaAtual][1];
+    musica.play();
+  }
+
+  musica.addEventListener("ended", avancarProximaMusica);
+  
 musica.addEventListener("timeupdate", atualizarBarraProgresso);
 
 

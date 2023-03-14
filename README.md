@@ -2,4 +2,4 @@
  
 <h2 style="text-align: center;">Imagem do Projeto</h2>
 
-<img src="img/fotodopj.png">
+<img src="fotodopj.png">

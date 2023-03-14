@@ -1,27 +1,35 @@
-//Funçoes das musicas
+// Variaveis
 
-let musicas = [
+const musicas = [
     ["music/baka.mp3", "VMZ", "img/baka"], 
     ["music/balas.mp3", "VMZ", "img/depre"], 
     ["music/plutao.mp3", "VMZ", "img/plutao"]
 ];
+
+// Botoes 
 const btnVolta = document.querySelector("#volta");
 const btnPlay = document.querySelector("#play");
 const btnPause = document.querySelector("#pause");
 const btnProximo = document.querySelector("#proximo");
+
+// Musicas
 const musica = document.querySelector("#audio");
 const img = document.querySelector("img");
 const nomeMusica = document.querySelector(".nome__musica");
 const nomeArtista = document.querySelector(".nome__artista");
-
 let musicaAtual = 0;
+
 
 //Eventos
 
+//Chama as Imagem
 img.src = musicas[musicaAtual][2] + ".jpg";
 
+//função que volta as música
 btnVolta.addEventListener('click', ()=>{
+    
     musicaAtual--;
+    
     if (musicaAtual < 0) {
         musicaAtual = musicas.length - 1;
     }
@@ -35,6 +43,7 @@ btnVolta.addEventListener('click', ()=>{
     btnPause.style.display = "block";
 });
 
+//função que da play na música 
 btnPlay.addEventListener('click', ()=> {
     btnPlay.style.display = "none";
     btnPause.style.display = "block";
@@ -43,6 +52,7 @@ btnPlay.addEventListener('click', ()=> {
       }
 });
 
+// Função que pausa a música
 btnPause.addEventListener('click', ()=> {
     btnPlay.style.display = "block";
     btnPause.style.display = "none";
@@ -52,6 +62,7 @@ btnPause.addEventListener('click', ()=> {
       }
 });
 
+// Fuunção para troca de música
 btnProximo.addEventListener('click', ()=>{
     musicaAtual++;
     if (musicaAtual >= musicas.length) {
@@ -67,8 +78,8 @@ btnProximo.addEventListener('click', ()=>{
     btnPlay.style.display = "none";
     btnPause.style.display = "block";
 });
-//função para barra de progresso
 
+// função para barra de progresso
 const barraProgresso = document.querySelector("progress");
 
 function atualizarBarraProgresso() {
@@ -99,6 +110,7 @@ function atualizarBarraProgresso() {
 
 }
 
+// Troca de música assim que ela chega no final
 function avancarProximaMusica() {
     musicaAtual++;
     if (musicaAtual >= musicas.length) {
@@ -112,8 +124,10 @@ function avancarProximaMusica() {
     musica.play();
   }
 
-  musica.addEventListener("ended", avancarProximaMusica);
+// Chamando a a função proxima música
+musica.addEventListener("ended", avancarProximaMusica);
   
+// Chamando a barra de progresso
 musica.addEventListener("timeupdate", atualizarBarraProgresso);
 
 

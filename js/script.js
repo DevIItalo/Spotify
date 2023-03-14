@@ -1,9 +1,9 @@
 // Variaveis
 
 const musicas = [
-    ["music/baka.mp3", "VMZ", "img/baka"], 
-    ["music/balas.mp3", "VMZ", "img/depre"], 
-    ["music/plutao.mp3", "VMZ", "img/plutao"]
+    ["music/baka.mp3", "VMZ", "../img/baka"], 
+    ["music/balas.mp3", "VMZ", "../img/depre"], 
+    ["music/plutao.mp3", "VMZ", "../img/plutao"]
 ];
 
 // Botoes 
